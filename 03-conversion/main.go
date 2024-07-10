@@ -25,4 +25,6 @@ func main() {
 	} else {
 		fmt.Println("Added 1 to your rating: ", numRating + 1)
 	}
+
+	fp
 }

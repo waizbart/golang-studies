@@ -36,4 +36,6 @@ func main()  {
 	tries := ask_guess(int64(random_n), 0)
 
 	fmt.Println("CONGRATULATIONS, YOUR ANSWER IS RIGHT! Tries count: ", tries)
+
+	fmt.Scanln()
 }

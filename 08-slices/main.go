@@ -2,20 +2,20 @@ package main
 
 import (
 	"fmt"
-	"sort"
+	// "sort"
 )
 
 func main() {
 	fmt.Println("Welcome to my study about go slices")
 
 	var top5BestNumbers = []int{7, 9, 13}
-	fmt.Printf("Type of top list is: %T\n", top5BestNumbers)
+	// fmt.Printf("Type of top list is: %T\n", top5BestNumbers)
 
 	top5BestNumbers = append(top5BestNumbers, 2004, 17)
-	fmt.Println("List size: ", len(top5BestNumbers))
+	// fmt.Println("List size: ", len(top5BestNumbers))
 
 	top5BestNumbers = top5BestNumbers[2:4]
-	fmt.Println("List", top5BestNumbers)
+	// fmt.Println("List", top5BestNumbers)
 
 	highScore := make([]int, 4)
 
@@ -31,6 +31,18 @@ func main() {
 
 	// sort.Ints(highScore)
 
-	fmt.Println("SORTED: ", highScore)
-	fmt.Println("IS SORTED: ", sort.IntsAreSorted(highScore))
+	// fmt.Println("SORTED: ", highScore)
+	// fmt.Println("IS SORTED: ", sort.IntsAreSorted(highScore))
+
+	// how to remove a value from slice based on index
+
+	var courses = []string{"Python", "React", "GO", "Javascript", "Ruby"}
+
+	fmt.Println(courses)
+
+	index := 2
+
+	courses = append(courses[:index], courses[index+1:]...)
+	
+	fmt.Println(courses)
 }

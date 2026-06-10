@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	welcome := "welcome message blablabla"
+	welcome := "hey welcomer, I am glad you are here to execute our gest user input golang script!"
 	fmt.Println(welcome)
 
 	reader := bufio.NewReader(os.Stdin)

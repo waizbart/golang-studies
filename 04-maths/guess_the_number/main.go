@@ -9,9 +9,9 @@ import (
 	"strings"
 )
 
-func ask_guess(random_n int64, tries int) int {
-	tries++
+const RANGE = 100
 
+func ask_guess(random_n int64, tries int) int {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Printf("your guess: ")
 	read_guess, _ := reader.ReadString('\n')
@@ -25,17 +25,15 @@ func ask_guess(random_n int64, tries int) int {
 		fmt.Println("go down...")
 	}
 
-	return ask_guess(random_n, tries)
+	return ask_guess(random_n, tries + 1)
 }
 
 func main()  {
-	fmt.Println("===== GUESS THE NUMBER I'M THINKING! =====")
+	fmt.Printf("===== GUESS THE NUMBER I'M THINKING! (0-%d) =====\n\n", RANGE)
 
-	var random_n int = rand.Intn(10)
+	var random_n int = rand.Intn(RANGE)
 
-	tries := ask_guess(int64(random_n), 0)
+	tries := ask_guess(int64(random_n), 1)
 
 	fmt.Println("CONGRATULATIONS, YOUR ANSWER IS RIGHT! Tries count: ", tries)
-
-	fmt.Scanln()
 }

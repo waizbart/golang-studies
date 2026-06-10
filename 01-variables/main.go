@@ -38,6 +38,7 @@ func main() {
 	// no var style
 	numberOfDucks := 1000000
 	fmt.Println(numberOfDucks)
+	fmt.Printf("Variable  numberOfDucks is of type: %T \n", numberOfDucks)
 
 	fmt.Println(TIMEOUT)
 }
